@@ -1,0 +1,8 @@
+concurrent = 1
+check_interval = 0
+
+[[runners]]
+  executor = "docker"
+  [runners.docker]
+    tls_verify = false
+    privileged = true

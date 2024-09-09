@@ -53,4 +53,3 @@ jobs:
         with:
           subject-name: simenf05/experiments
           subject-digest: ${{ steps.push.outputs.digest }}
-          push-to-registry: true

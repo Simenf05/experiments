@@ -51,6 +51,5 @@ jobs:
       - name: Generate artifact attestation
         uses: actions/attest-build-provenance@v1
         with:
-          subject-name: index.docker.io/simenf05/experiments
+          subject-name: simenf05/experiments
           subject-digest: ${{ steps.push.outputs.digest }}
-          push-to-registry: true

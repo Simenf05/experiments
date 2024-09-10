@@ -5,7 +5,7 @@ const app = express();
 app.get("/", (req, res) => {
   console.log("called.");
 
-  res.json({ hei: "halla2" });
+  res.json({ hei: "halla" });
 });
 
 const port = 8080;

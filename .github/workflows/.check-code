@@ -1,3 +1,0 @@
-name: Check the code with prettier
-
-on: push

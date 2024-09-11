@@ -1,20 +1,21 @@
 import eslintConfigPrettier from 'eslint-config-prettier'
+import globals from 'globals'
 
 export default [
   {
+    languageOptions: {
+      ecmaVersion: 2022,
+      sourceType: 'module',
+      globals: {
+        ...globals.browser,
+        ...globals.node,
+        myCustomGlobal: 'readonly',
+      },
+    },
     rules: {
       'no-unused-vars': 'error',
       'no-undef': 'error',
-      'comma-dangle': [
-        'error',
-        {
-          arrays: 'always',
-          objects: 'always',
-          imports: 'always',
-          exports: 'always',
-          functions: 'always',
-        },
-      ],
+      'prefer-const': 'error',
     },
   },
   eslintConfigPrettier,

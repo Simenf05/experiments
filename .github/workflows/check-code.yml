@@ -1,7 +1,8 @@
-name: Check the code with lint and prettier
+name: Check the code with prettier and lint
 on: push
+
 jobs:
-  build:
+  lint:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -9,5 +10,13 @@ jobs:
         run: yarn
       - name: Run ESLint
         run: npm run lint
+
+  prettier:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install modules
+        run: yarn
       - name: Run prettier
         run: npm run check
+  

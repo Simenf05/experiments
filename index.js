@@ -5,10 +5,14 @@ const app = express()
 app.get('/', (req, res) => {
   console.log('called.')
 
+  let simen = "simen"
+
+  console.log(simen);
+
   res.json({
     hei: 'halla',
     hei2: 'halla2',
-  })
+  })  
 })
 
 const port = 8080

@@ -1,22 +1,29 @@
-const express = require("express");
+const express = require('express')
 
-const app = express();
+const app = express()
 
-app.get("/", (req, res) => {
-  console.log("called.");
+app.get('/', (req, res) => {
+  console.log('called.')
 
-  res.json({ hei: "halla" });
-});
+  let simen = "simen"
 
-const port = 8080;
+  console.log(simen);
+
+  res.json({
+    hei: 'halla',
+    hei2: 'halla2',
+  })  
+})
+
+const port = 8080
 
 const server = app.listen(port, () => {
-  console.log(`running express app on port: ${port}`);
-});
+  console.log(`running express app on port: ${port}`)
+})
 
-process.on("SIGTERM", () => {
-  console.log("SIGTERM signal received: closing HTTP server");
+process.on('SIGTERM', () => {
+  console.log('SIGTERM signal received: closing HTTP server')
   server.close(() => {
-    console.log("HTTP server closed");
-  });
-});
+    console.log('HTTP server closed!')
+  })
+})
